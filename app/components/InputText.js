@@ -1,19 +1,18 @@
 var React = require('react');
 
 var InputText = React.createClass({
-  handleChange: function(e) {
-    var text = e.target.value;
-    this.props.onChange(text);
-  },
+    handleChange: function(e) {
+        var text = e.target.value;
+        this.props.onChange(text);
+    },
 
-  render: function() {
-    return (
-      <textarea
-        className="form-control"
-        rows="15"
-        onChange={this.handleChange} />
-    );
-  }
+    render: function() {
+        return (
+            <textarea className="form-control" rows="15" onChange={this.handleChange}>
+                {this.props.text}
+            </textarea>
+        );
+    }
 });
 
 module.exports = InputText;
